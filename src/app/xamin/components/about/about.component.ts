@@ -6,8 +6,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  @Input() List: any[];
-  @Input() titleSectionProp: any[];
+  @Input() List: any;
+  @Input() titleSectionProp: any;
 
 
   constructor() { }

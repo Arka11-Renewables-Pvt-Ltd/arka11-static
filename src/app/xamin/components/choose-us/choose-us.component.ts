@@ -5,7 +5,7 @@ import {Component, Input, OnInit} from '@angular/core';
   templateUrl: './choose-us.component.html',
 })
 export class ChooseUsComponent implements OnInit {
-  @Input() lists: any[];
+  @Input() lists: any;
   constructor() { }
 
   ngOnInit() {
