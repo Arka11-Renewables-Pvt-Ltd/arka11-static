@@ -15,12 +15,6 @@
 /* Fontawesome Fonts */
 @import "assets/css/all.min.css";
 
-/** App CSS */
-@import "assets/css/responsive.css";
-
-/* Xamin custom */
-@import "assets/css/xamin-style.css";
-
 /* ionicons CSS */
 @import "assets/css/ionicons.min.css";
 
@@ -51,5 +45,5 @@
 /* Xamin custom */
 @import "assets/css/xamin-style.css";
 
-/* Responsive */
+/** App CSS */
 @import "assets/css/responsive.css";
