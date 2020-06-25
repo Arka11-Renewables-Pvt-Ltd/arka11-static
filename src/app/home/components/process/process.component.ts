@@ -13,7 +13,7 @@ export class ProcessComponent implements OnInit {
   };
 
   circle1Data: any = {
-    img: '01.png',
+    img: '05.png',
     title: 'Survey',
     description: 'Get a free survey and let us know about any specific requirements.',
     delay: '0.6s',
@@ -24,7 +24,7 @@ export class ProcessComponent implements OnInit {
 
   circle2Data: any = {
     class: 'mt-4 mt-md-0',
-    img: '02.png',
+    img: '06.png',
     title: 'Design',
     description: 'We have expert in-house engineering capabilities to build innovative solar solutions.',
     delay: '1s',
@@ -35,7 +35,7 @@ export class ProcessComponent implements OnInit {
 
   circle3Data: any = {
     class: 'mt-4 mt-md-0',
-    img: '03.png',
+    img: '07.png',
     title: 'Installation',
     description: 'Our integrated profile affords us greater control over project development, construction and operation.',
     delay: '1.4s',

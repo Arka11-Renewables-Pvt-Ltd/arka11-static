@@ -45,7 +45,7 @@
             <div class="menu-main-menu-container">
               <ul id="top-menu" class="navbar-nav ml-auto">
                 <li class="menu-item {{ option.isCurrent !== undefined && option.isCurrent ? 'current-menu-item' : '' }}" *ngFor="let option of navItemList">
-                  <a href="{{ option.href }}">{{ option.title }}</a><i *ngIf="option.submenu" class="fa fa-angle-down toggledrop" aria-hidden="true"></i>
+                  <a [routerLink]="option.href" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">{{ option.title }}</a><i *ngIf="option.submenu" class="fa fa-angle-down toggledrop" aria-hidden="true"></i>
                   <ul class="sub-menu" *ngIf="option.submenu">
                     <li *ngFor="let child of option.submenu" class="menu-item {{ child.isCurrent !== undefined && child.isCurrent ? 'current-menu-item' : '' }}">
                       <a class="isubmenu" [routerLink]="child.href" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">{{ child.title }}</a><i *ngIf="child.submenu" class="fa fa-angle-down toggledrop" aria-hidden="true"></i>
@@ -62,7 +62,7 @@
           </div>
           <div class="sub-main">
             <nav aria-label="breadcrumb">
-              <div class="blue-btn button"><a href="#">Get Started</a></div>
+              <div class="blue-btn button"><a routerLink="/get-quote">Get Quote</a></div>
             </nav>
           </div>
         </nav>
