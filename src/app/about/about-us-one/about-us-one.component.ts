@@ -9,22 +9,19 @@ import { topMenuBarItems } from '../../../constants/menu';
 
 export class AboutUsOneComponent implements OnInit {
 
-  logoImage = '/assets/images/logo.png';
-  contactInfo: any = {
-    contactNumber: '+0123456789',
-    email: 'support@iqnonicthemes.com'
-  };
-  public navItems: any = topMenuBarItems;
-
   data : any = {
     title:"About us",
-    img:"04.png"
+    img:"07.png"
   };
 
   titleSectionProp: any = {
-    title: 'ABOUT US',
-    subTitle: 'Human Behaviour, Data Science',
-    description: 'It is a long established fact that a reader will be distracted by the of readable content of a page when looking at its layout.'
+    title: 'About Us',
+    subTitle: 'Sustainable & Affordable',
+    descriptionHTML: `<p>Incorporated amid corona crisis 2020, we are team of young energetic individuals who dream of fight global climatic changes by adapting to Renewable power sources to cater the ever hungry and demanding world to become self-sustained and yet contribute to the future & nature.</p>
+      <p>Urgent actions will make the consequence of global warning manageable, what is at stake is the half of ecosystem, wildlife, and importantly the world we leave for our children.</p>
+      <p>With current technology we cannot reach sun, but sun definitely is more approachable from earth as photons, with 8 minutes of travel a photon from sun can be a game changer by Providing life energy and bring sustainability, each leaf of a tree is an energy synthesiser hence is self-sustaining without any external search for food & energy, similarly each house should become self-sustained power house by harness the power of sun.</p>
+      <p>India has a unique confluence., we are a place with lot of sunshine, we are Tech savvy community, we have high electricity cost, highly population with high demand of electricity.</p>
+    `
   };
 
   Lists: any = {
@@ -35,16 +32,16 @@ export class AboutUsOneComponent implements OnInit {
 
   cardData: any[] = [
     {
-      title : "Data for all people",
-      desc : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      title : "Vision",
+      desc : "Making Every Buildings Zero Net Energy for Empowering Growth"
     },
     {
-      title : "A new breed of AI",
-      desc : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      title : "Mission",
+      desc : "Making Environmentally & socially responsible technologies commercially viable"
     },
     {
-      title : "Analytics business",
-      desc : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      title : "Core Business Value",
+      desc : "To bring Positive Impact in environment & Society"
     },
   ];
 

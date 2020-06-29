@@ -16,7 +16,7 @@ const topMenuBarItems = [
     title: 'Our Cases '
   },
   {
-    href: '/contact-us',
+    href: '/pages/contact-us',
     title: 'Contact Us ',
   }
 ];

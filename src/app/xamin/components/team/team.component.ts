@@ -9,32 +9,26 @@ export class TeamComponent implements OnInit {
   List: any[] = [
     {
       img:  "2.jpg",
-      name: "Mark McManus",
-      position: "COO",
+      name: "P Ashok Chowdary",
+      position: "Founder & CEO",
 
     },
     {
       img:  "3.jpg",
-      name: "Jack White",
-      position: "CEO",
+      name: "P Chanakya Chowdary",
+      position: "Co-Founder & Head IT",
 
     },
     {
       img:  "4.jpg",
-      name: "Handry White",
-      position: "CTO",
+      name: "G Sridhar Kumar",
+      position: "COO",
 
     },
     {
       img:  "5.jpg",
-      name: "Jack McManus",
-      position: "Project Manager",
-
-    },
-    {
-      img:  "1.jpg",
-      name: "Marcash Dane",
-      position: "Project Manager",
+      name: "Vinod",
+      position: "Business Advisor",
 
     }
     ];

@@ -1,0 +1,36 @@
+<app-top-banner [data]="data"></app-top-banner>
+<div class="main-content">
+  <!-- Get quote page -->
+  <section class="pt-0">
+    <div class="container">
+      <div class="row  align-items-center mt-4">
+        <div class="offset-sm-3 col-sm-6">
+          <h2 class="text-left mb-4">To get a personalised solar quotation, please fill the form:</h2>
+          <div class="response-output "></div>
+          <form class="needs-validation" novalidate (ngSubmit)="getQuote(quoteForm)" [ngClass]="{'was-validated' : quoteForm.submitted}" #quoteForm="ngForm">
+            <div class="contact-form">
+              <div class=""> <input type="text" name="name" [(ngModel)]="quote.name" class="form-control text " placeholder="Your Name" required> </div>
+              <div class=""> <input type="text" name="email" [(ngModel)]="quote.email" class="form-control text " placeholder="Your Email" required> </div>
+              <div class=""> <input type="text" name="subject" [(ngModel)]="quote.subject" class="form-control text " placeholder="Subject" required> </div>
+              <div class=""> <textarea name="message" [(ngModel)]="quote.message" cols="40" rows="10" class="form-control textarea " placeholder="Your Message" required></textarea> </div>
+              <div> <button id="submit-4" name="submit" type="submit" value="Send" class="button d-block w-100">Send Message</button> </div>
+            </div>
+          </form>
+          <div *ngIf="error" class="mt-4">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span [textContent]="error"></span>
+            </div>
+            <br>
+          </div>
+          <div *ngIf="success" class="mt-4">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span [textContent]="success"></span>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact us page End-->
+</div>
