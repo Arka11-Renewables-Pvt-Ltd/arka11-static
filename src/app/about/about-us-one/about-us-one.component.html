@@ -1,6 +1,17 @@
 <app-top-banner [data]="data"></app-top-banner>
 <div class="main-content">
   <app-about-two [titleSectionProp]="titleSectionProp" [List]="Lists"></app-about-two>
+  <div *ngFor="let section of content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 wow fadeInUp mb-5">
+          <h4 class="mb-2">{{ section.title }}</h4>
+          <h6 class="mb-2">{{ section.subtitle }}</h6>
+          <div [innerHTML]="section.html"></div>
+        </div> 
+      </div>
+    </div>
+  </div>
   <app-about-card [cardData]="cardData"></app-about-card>
   <!-- <app-history></app-history> -->
   <app-our-team></app-our-team>

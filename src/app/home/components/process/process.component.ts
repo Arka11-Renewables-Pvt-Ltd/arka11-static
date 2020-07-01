@@ -15,7 +15,7 @@ export class ProcessComponent implements OnInit {
   circle1Data: any = {
     img: '05.png',
     title: 'Survey',
-    description: 'Get a free survey and let us know about any specific requirements.',
+    description: 'Get a site survey and let us know about any specific requirements.',
     delay: '0.6s',
     positionClass: 'right',
     type:'xamin-process'
