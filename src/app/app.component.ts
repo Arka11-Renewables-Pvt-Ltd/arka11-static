@@ -14,7 +14,7 @@ export class AppComponent {
   logoImageFooter = '/assets/images/logo-footer.png';
   contactInfo: any = {
     contactNumber: '+91 7702302411',
-    email: 'info@arka11.com',
+    email: 'sales@arka11.com',
     company: 'Arka11 Renewable Solutions Pvt Ltd',
     address: `LIG, B 212, Dr A S Rao Nagar ECIL Post, Near Dr A S Rao Nagar PO, Kapra, Hyderabad - 500062`
   };

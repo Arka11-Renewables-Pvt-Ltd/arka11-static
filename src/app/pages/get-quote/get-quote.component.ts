@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {PluginsService} from "../../xamin/plugins.service";
+import { ConfigService } from 'src/app/config.service';
 
 @Component({
   selector: 'app-get-quote',
@@ -57,13 +58,11 @@ export class GetQuoteComponent implements OnInit {
 
   areas = ['']
   
-  quoteApi = "https://ktyz28upu1.execute-api.ap-south-1.amazonaws.com/Prod/send"
-
-  quote: any = {};
+  quote: any = {type: ''};
   error: string;
   success: string;
 
-  constructor(private plugins: PluginsService, private http: HttpClient) { }
+  constructor(private plugins: PluginsService, private config: ConfigService, private http: HttpClient) { }
 
   ngOnInit() {
     const current = this;
@@ -81,14 +80,17 @@ export class GetQuoteComponent implements OnInit {
 
     let payload = {
       name: this.quote.name,
-      toEmails: ['info@arka11.com'],
+      toEmails: ['chanakya.prathi@gmail.com'],
       replyToEmails: [this.quote.email],
-      subject: this.quote.subject,
-      message: this.quote.message
+      phone: this.quote.phone,
+      bill: this.quote.bill,
+      type: this.quote.type,
+      subject: 'Quotation Request',
+      page: 'Quote'
     }
 
     return this.http.post(
-      this.quoteApi,
+      this.config.api,
       payload,
       {headers}
     ).subscribe(resp => {

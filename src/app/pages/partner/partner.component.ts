@@ -1,28 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {PluginsService} from "../../xamin/plugins.service";
+import { topMenuBarItems } from '../../../constants/menu';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { ConfigService } from 'src/app/config.service';
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
+  selector: 'app-partner',
+  templateUrl: './partner.component.html',
 })
-export class ContactUsComponent implements OnInit {
+export class PartnerComponent implements OnInit {
+  public navItems: any = topMenuBarItems;
 
   data : any = {
-    title:"Contact us",
-    img:"04.png"
+    title:"Become a Channel Partner",
+    img:"08.png"
   };
 
-  List : any[] =[
-    {
-      title:"Hyderabad Office",
-      company: "Arka11 Renewable Solutions Pvt Ltd",
-      address:"LIG, B 212, Dr A S Rao Nagar ECIL Post, Near Dr A S Rao Nagar PO, Kapra, Hyderabad - 500062"
-    }
-  ]
-
-  query: any = {};
+  partner: any = {}
   error: string;
   success: string;
 
@@ -34,8 +28,8 @@ export class ContactUsComponent implements OnInit {
       current.plugins.index();
     }, 200);
   }
-
-  submitMessage(form) {
+  
+  becomePartner(form) {
     if(form.$invalid) { return; }
 
     const headers = new HttpHeaders();
@@ -43,12 +37,15 @@ export class ContactUsComponent implements OnInit {
     headers.set('Accept', 'application/json; charset=utf-8');
 
     let payload = {
-      name: this.query.name,
+      name: this.partner.name,
       toEmails: ['chanakya.prathi@gmail.com'],
-      replyToEmails: [this.query.email],
-      subject: this.query.subject,
-      message: this.query.message,
-      page: 'Contact'
+      replyToEmails: [this.partner.email],
+      phone: this.partner.phone,
+      company: this.partner.company,
+      city: this.partner.city,
+      subject: 'Channel Partner Request',
+      message: this.partner.message,
+      page: 'Partner'
     }
 
     return this.http.post(
@@ -57,7 +54,7 @@ export class ContactUsComponent implements OnInit {
       {headers}
     ).subscribe(resp => {
       form.resetForm();
-      this.success = 'Your message is successfully sent.'
+      this.success = 'Your request is sent.'
     },
     err => {
       this.error = err.data

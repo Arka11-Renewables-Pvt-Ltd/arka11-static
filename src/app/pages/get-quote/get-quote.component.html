@@ -11,9 +11,18 @@
             <div class="contact-form">
               <div class=""> <input type="text" name="name" [(ngModel)]="quote.name" class="form-control text " placeholder="Your Name" required> </div>
               <div class=""> <input type="text" name="email" [(ngModel)]="quote.email" class="form-control text " placeholder="Your Email" required> </div>
-              <div class=""> <input type="text" name="subject" [(ngModel)]="quote.subject" class="form-control text " placeholder="Subject" required> </div>
-              <div class=""> <textarea name="message" [(ngModel)]="quote.message" cols="40" rows="10" class="form-control textarea " placeholder="Your Message" required></textarea> </div>
-              <div> <button id="submit-4" name="submit" type="submit" value="Send" class="button d-block w-100">Send Message</button> </div>
+              <div class=""> <input name="phone" [(ngModel)]="quote.phone" class="form-control text " placeholder="Your Mobile #" pattern="^((\\+91-?)|0)?[0-9]{10}$" required> </div>
+              <div class=""> <input type="text" name="bill" [(ngModel)]="quote.bill" class="form-control text " placeholder="Average Monthly Bill (Rs)" required> </div>
+              <div class=""> <select name="type" [(ngModel)]="quote.type" class="form-control" placeholder="Type" required>
+                <option value="">Select Type </option>
+                <option value="residential">
+                  Residential
+                </option>
+                <option value="commercial">
+                  Commercial
+                </option>
+              </select> </div>
+              <div> <button id="submit-4" name="submit" type="submit" value="Send" class="button d-block w-100">Submit</button> </div>
             </div>
           </form>
           <div *ngIf="error" class="mt-4">

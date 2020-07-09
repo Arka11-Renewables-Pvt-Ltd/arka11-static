@@ -8,6 +8,10 @@ const topMenuBarItems = [
     title: 'About Us '
   },
   {
+    href: '/channel-partner',
+    title: 'Become Partner '
+  },
+  {
     href: '/services',
     title: 'Services '
   },
@@ -16,7 +20,7 @@ const topMenuBarItems = [
     title: 'Our Cases '
   },
   {
-    href: '/pages/contact-us',
+    href: '/contact-us',
     title: 'Contact Us ',
   }
 ];

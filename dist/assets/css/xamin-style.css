@@ -896,7 +896,9 @@ About style home-2
 .consult-services.xamin-circle .circle-effect { display: inline-block; width: 100px; height: 100px; line-height: 110px; margin-bottom: 30px; border-radius: 90px; background: #eff1fe; box-shadow: 0 0 0 14px rgb(239, 241, 254, 0.3); }
 .xamin-process.xamin-circle { padding: 0; margin-bottom: 30px; position: relative; width: 100%; }
 /* .xamin-process.xamin-circle.right:before { background-image: url('../images/26.png'); content: ""; display: inline-block; position: absolute; top: 30px; right: -145px; background-repeat: no-repeat; width: 240px; height: 200px; } */
-.xamin-process.xamin-circle .circle-effect { border: 2px dashed#2C9345; width: 140px; height: 140px; border-radius: 90px; padding: 10px; margin: 0 auto 30px; text-align: center; }
+.xamin-process.xamin-circle .circle-effect { 
+  /* border: 2px dashed#2C9345;  */
+  width: 140px; height: 140px; border-radius: 90px; padding: 10px; margin: 0 auto 30px; text-align: center; }
 .xamin-process.xamin-circle .circle-effect img { display: inline-block; width: 120px; height: 120px; line-height: 120px; border-radius: 90px; background-image: -moz-linear-gradient(90deg, rgb(241, 243, 254) 0%, rgb(255, 255, 255) 100%); background-image: -webkit-linear-gradient(90deg, rgb(241, 243, 254) 0%, rgb(255, 255, 255) 100%); background-image: -ms-linear-gradient(90deg, rgb(241, 243, 254) 0%, rgb(255, 255, 255) 100%); box-shadow: 0 0 0 14px rgb(239, 241, 254, 0.3); }
 .consult-services.xamin-square { padding: 0; margin-bottom: 30px; position: relative; width: 100%; }
 .consult-services.xamin-square .square-effect { text-align: center; background: #ffffff; display: inline-block; width: 110px; height: 110px; line-height: 110px; margin-bottom: 30px; box-shadow: 4.871px 34.659px 30px 0px rgba(0, 0, 0, 0.06); }
@@ -968,8 +970,8 @@ About style home-2
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, .wpcf7-not-valid-tip { display: none !important; }
 .contact-form { position: relative; width: 100%; display: inline-block; }
 .contact-form  input[type=submit] { margin-top: 15px; }
-.contact-form  input { position: relative; width: 100%; margin-bottom: 15px; background: #eff1fe; border-radius: 4px; padding-left: 15px; height: 55px; line-height: 55px; clear: both; border: 1px solid #e1e1e1; }
-.contact-form  input:focus, .contact-form .textarea textarea:focus { border: 1px solid#2C9345; box-shadow: none; outline: none; }
+.contact-form  input, .contact-form  select { position: relative; width: 100%; margin-bottom: 15px; background: #eff1fe; border-radius: 4px; padding-left: 15px; height: 55px; line-height: 55px; clear: both; border: 1px solid #e1e1e1; }
+.contact-form  input:focus, .contact-form  select:focus, .contact-form .textarea textarea:focus { border: 1px solid#2C9345; box-shadow: none; outline: none; }
 .contact-form .textarea textarea { margin-bottom: 15px; width: 100%; float: left; background: #ffffff; border: 1px solid #eff1fe; border-radius: 4px; padding: 15px 0 0 20px; resize: none; }
 .contact-form  .wpcf7-not-valid { border: 1px solid #f00; }
 .contact-form .ajax-loader { margin: 32px 0 0 5px; }

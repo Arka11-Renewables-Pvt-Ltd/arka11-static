@@ -13,7 +13,7 @@ export class ServiceComponent implements OnInit {
   };
 
   Lists: any = {
-    isOuter: true,
+    isOuter: false,
     img: '11.png',
     desc: "Whether your aim is to cut energy costs, reduce your carbon footprint, fulfil regulatory obligations or accomplish your sustainability goals, Arka11 has a solution for you."
   };

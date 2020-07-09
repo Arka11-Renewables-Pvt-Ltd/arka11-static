@@ -9,6 +9,7 @@ import { OurClientComponent } from './our-client/our-client.component';
 import { CareersComponent } from './careers/careers.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { GetQuoteComponent } from './get-quote/get-quote.component';
+import { PartnerComponent } from './partner/partner.component';
 
 
 const routes: Routes = [
@@ -31,10 +32,14 @@ const routes: Routes = [
     {
       path: 'get-quote',
       component: GetQuoteComponent,
+    },
+    {
+      path: 'channel-partner',
+      component: PartnerComponent
     }
   ];
 @NgModule({
-  declarations: [OurTeamComponent, OurClientComponent, CareersComponent, ContactUsComponent, GetQuoteComponent],
+  declarations: [OurTeamComponent, OurClientComponent, CareersComponent, ContactUsComponent, GetQuoteComponent, PartnerComponent],
   imports: [
     CommonModule,
     FormsModule,
