@@ -38,7 +38,7 @@ export class PartnerComponent implements OnInit {
 
     let payload = {
       name: this.partner.name,
-      toEmails: ['chanakya.prathi@gmail.com'],
+      toEmails: [this.config.toEmail],
       replyToEmails: [this.partner.email],
       phone: this.partner.phone,
       company: this.partner.company,

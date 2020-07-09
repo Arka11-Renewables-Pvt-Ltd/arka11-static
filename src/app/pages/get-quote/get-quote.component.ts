@@ -80,7 +80,7 @@ export class GetQuoteComponent implements OnInit {
 
     let payload = {
       name: this.quote.name,
-      toEmails: ['chanakya.prathi@gmail.com'],
+      toEmails: [this.config.toEmail],
       replyToEmails: [this.quote.email],
       phone: this.quote.phone,
       bill: this.quote.bill,

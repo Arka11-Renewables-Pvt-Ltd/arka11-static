@@ -44,7 +44,7 @@ export class ContactUsComponent implements OnInit {
 
     let payload = {
       name: this.query.name,
-      toEmails: ['chanakya.prathi@gmail.com'],
+      toEmails: [this.config.toEmail],
       replyToEmails: [this.query.email],
       subject: this.query.subject,
       message: this.query.message,
