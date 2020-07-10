@@ -1,1 +1,25 @@
-<app-service-box  [Lists]="Lists" [titleSectionProp]="titleSectionProp"></app-service-box>
+<div class="main-content">
+  <section>
+    <div class="container">
+      <div class="row mt-4">
+        <div *ngFor="let service of services" class="col-sm-12 wow fadeInUp">
+          <h4 class="mb-2">{{ service.title }}</h4> 
+          <p>{{ service.desc }}</p>
+        </div>
+      </div>
+      <!-- <div class="row mt-4">
+        <div class="col-sm-12 wow fadeInUp">
+          <h4 class="mb-4">Collaborate With Us & Get…</h4>
+          <ul>
+            <li><strong>Increased Business Momentum</strong>, Finding the right Solar projects for your business to expand & increase revenue streams.</li>
+            <li><strong>Guaranteed Quality</strong>, Arka11 has always delivered best quality products.</li>
+            <li><strong>Project Management</strong>, Digitized workflows for efficient execution.</li>
+            <li><strong>Specialized Training</strong>, Sales & Operations training to help you operate more efficiently.</li>
+            <li><strong>Complete Support</strong>, End-to-end support from designs to quality components.</li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </section>
+</div>
+

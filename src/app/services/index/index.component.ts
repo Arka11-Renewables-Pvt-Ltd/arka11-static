@@ -8,18 +8,12 @@ import { topMenuBarItems } from '../../../constants/menu';
 })
 export class IndexComponent implements OnInit {
 
-  logoImage = '/assets/images/logo.png';
-  contactInfo: any = {
-    contactNumber: '+0123456789',
-    email: 'support@iqnonicthemes.com'
-  };
   public navItems: any = topMenuBarItems;
 
   data : any = {
     title:"Services",
-    img:"04.png"
+    img:"09.png"
   };
-
 
   constructor(private plugins: PluginsService) { }
 

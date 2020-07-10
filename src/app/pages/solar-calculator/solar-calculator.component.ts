@@ -1,22 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {PluginsService} from "../../xamin/plugins.service";
-import { topMenuBarItems } from '../../../constants/menu';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { ConfigService } from 'src/app/config.service';
 
 @Component({
-  selector: 'app-partner',
-  templateUrl: './partner.component.html',
+  selector: 'app-solar-calculator',
+  templateUrl: './solar-calculator.component.html',
 })
-export class PartnerComponent implements OnInit {
-  public navItems: any = topMenuBarItems;
+export class SolarCalculatorComponent implements OnInit {
 
   data : any = {
-    title:"Become a Channel Partner",
-    img:"08.png"
+    title:"Solar Calculator",
+    img:"09.png"
   };
 
-  partner: any = {}
+  quote: any = {type: ''};
   error: string;
   success: string;
 
@@ -28,8 +26,8 @@ export class PartnerComponent implements OnInit {
       current.plugins.index();
     }, 200);
   }
-  
-  becomePartner(form) {
+
+  getQuote(form) {
     if(form.$invalid) { return; }
 
     const headers = new HttpHeaders();
@@ -37,15 +35,14 @@ export class PartnerComponent implements OnInit {
     headers.set('Accept', 'application/json; charset=utf-8');
 
     let payload = {
-      name: this.partner.name,
+      name: this.quote.name,
       toEmails: [this.config.toEmail],
-      replyToEmails: [this.partner.email],
-      phone: this.partner.phone,
-      company: this.partner.company,
-      city: this.partner.city,
-      subject: 'Channel Partner Request',
-      message: this.partner.message,
-      page: 'Partner'
+      replyToEmails: [this.quote.email],
+      phone: this.quote.phone,
+      bill: this.quote.bill,
+      type: this.quote.type,
+      subject: 'Quotation Request',
+      page: 'Quote'
     }
 
     return this.http.post(
@@ -54,7 +51,7 @@ export class PartnerComponent implements OnInit {
       {headers}
     ).subscribe(resp => {
       form.resetForm();
-      this.success = 'Your request is sent.'
+      this.success = 'Your request is sent. You will receive quotation in your email soon.'
     },
     err => {
       this.error = err.data

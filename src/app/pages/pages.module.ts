@@ -10,6 +10,7 @@ import { CareersComponent } from './careers/careers.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { GetQuoteComponent } from './get-quote/get-quote.component';
 import { PartnerComponent } from './partner/partner.component';
+import { SolarCalculatorComponent } from './solar-calculator/solar-calculator.component';
 
 
 const routes: Routes = [
@@ -36,10 +37,14 @@ const routes: Routes = [
     {
       path: 'channel-partner',
       component: PartnerComponent
+    },
+    {
+      path: 'solar-calculator',
+      component: SolarCalculatorComponent
     }
   ];
 @NgModule({
-  declarations: [OurTeamComponent, OurClientComponent, CareersComponent, ContactUsComponent, GetQuoteComponent, PartnerComponent],
+  declarations: [OurTeamComponent, OurClientComponent, CareersComponent, ContactUsComponent, GetQuoteComponent, PartnerComponent, SolarCalculatorComponent],
   imports: [
     CommonModule,
     FormsModule,
