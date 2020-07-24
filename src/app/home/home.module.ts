@@ -15,6 +15,7 @@ import { OurBlogComponent } from './components/our-blog/our-blog.component';
 import { OurClientComponent } from './components/our-client/our-client.component';
 import { OurPartnerComponent } from './components/our-partner/our-partner.component';
 import { RevolutionSlider3Module } from '../revolution-slider3/revolution-slider3.module';
+import { CalculatorSectionComponent } from './components/calculator-section/calculator-section.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [WhyChooseUsComponent, CardSectionComponent, ServiceComponent, ProcessComponent, IndexComponent, AboutUsComponent, NavTabsComponent, ClientCounterComponent, OurTestimonialsComponent, OurBlogComponent, OurClientComponent, OurPartnerComponent],
+  declarations: [WhyChooseUsComponent, CardSectionComponent, ServiceComponent, ProcessComponent, IndexComponent, AboutUsComponent, NavTabsComponent, ClientCounterComponent, OurTestimonialsComponent, OurBlogComponent, OurClientComponent, OurPartnerComponent, CalculatorSectionComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

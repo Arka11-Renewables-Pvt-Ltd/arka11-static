@@ -10,7 +10,7 @@ export class CardSectionComponent implements OnInit {
     {
       img:"01.png",
       title:"Reliable & Scalable",
-      sub_title:"big data through robust that solutions the power."
+      sub_title:"We pursue relationships based on transparency, persistence, mutual trust and integrity with our employees, customers and other business partners."
     },
     {
       img:"02.png",

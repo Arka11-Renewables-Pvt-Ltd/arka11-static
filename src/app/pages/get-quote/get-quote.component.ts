@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {PluginsService} from "../../xamin/plugins.service";
 import { ConfigService } from 'src/app/config.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-get-quote',
@@ -18,13 +19,20 @@ export class GetQuoteComponent implements OnInit {
   error: string;
   success: string;
 
-  constructor(private plugins: PluginsService, private config: ConfigService, private http: HttpClient) { }
+  constructor(private plugins: PluginsService, private config: ConfigService, private http: HttpClient, private location: Location) { }
 
   ngOnInit() {
     const current = this;
     setTimeout(function() {
       current.plugins.index();
     }, 200);
+    let input: any = this.location.getState();
+    if (input.bill) {
+      this.quote.bill = input.bill;
+    }
+    if (input.type) {
+      this.quote.type = input.type;
+    }
   }
 
   getQuote(form) {
