@@ -21,13 +21,13 @@ export class TeamComponent implements OnInit {
     },
     {
       img:  "4.jpg",
-      name: "G Sridhar Kumar",
+      name: "G K Sridhar",
       position: "COO",
 
     },
     {
       img:  "5.jpg",
-      name: "Vinod",
+      name: "G Kumar",
       position: "Business Advisor",
 
     }
