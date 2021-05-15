@@ -5,6 +5,7 @@ import { XaminModule } from "../xamin/xamin.module";
 import { AboutUsOneComponent } from './about-us-one/about-us-one.component';
 import { HistoryComponent } from './history/history.component';
 import { OurTeamComponent } from './our-team/our-team.component';
+import { AchievementsComponent } from './achivements/achievements.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AboutUsOneComponent, HistoryComponent, OurTeamComponent],
+  declarations: [AboutUsOneComponent, HistoryComponent, OurTeamComponent, AchievementsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

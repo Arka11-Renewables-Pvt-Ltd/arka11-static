@@ -12,6 +12,10 @@ const topMenuBarItems = [
     title: 'Become Partner '
   },
   {
+    href: '/portfolio',
+    title: 'Portfolio '
+  },
+  {
     href: '/services',
     title: 'Services '
   },

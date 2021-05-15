@@ -97,7 +97,7 @@ import { ProjectPortfolioBoxComponent } from './components/project-portfolio-box
     BlogOwlComponent,
     CardOneComponent,
     ChooseUsComponent,
-    ProjectPortfolioBoxComponent
+    ProjectPortfolioBoxComponent,
   ],
   imports: [
     CommonModule,
