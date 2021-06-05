@@ -12,7 +12,7 @@ export class IndexComponent implements OnInit {
 
   data : any = {
     title:"Services",
-    img:"09.png"
+    img:"../services/services.jpg"
   };
 
   constructor(private plugins: PluginsService) { }

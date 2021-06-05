@@ -14,7 +14,7 @@
               <h4 class="pt-3 pb-1 pt-lg-0 pb-lg-0">{{ list.year }}</h4>
             </div>
             <div class="col-sm-12 col-lg-8 col-md-7">
-              <p class="mb-0">{{ list.desc }}</p>
+              <p class="mb-0" [innerHtml]="list.desc"></p>
             </div>
           </div>
         </div>

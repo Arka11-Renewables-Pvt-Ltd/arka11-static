@@ -8,8 +8,8 @@ export class HistoryComponent implements OnInit {
 
   titleSectionProp: any = {
     class:'text-center',
-    title: 'OUR HISTORY',
-    subTitle: 'Xamin Company History',
+    title: 'Awards Achieved',
+    subTitle: '',
     description: ''
   };
 
@@ -40,15 +40,9 @@ export class HistoryComponent implements OnInit {
     // },
     {
       class: "bg-gray",
-      img:  "Logo-IAF-solid.jpg",
+      img:  "Achieve-IAA-black.jpg",
       name: "Indian Achievers' Forum",
-      desc: "Congratulations on winning “Indian Achievers' Award for Emerging Company, 2020 You really deserved this honour for your Achievement and Contribution in Nation Building. I am sure this will motivate you to further excel in your field and inspire others as well."
-    },
-    {
-      class:  "border",
-      img:  "Logo-IAA-solid.jpg",
-      name: "Indian Achievers Award",
-      desc: ""
+      desc: `"Congratulations on winning Indian Achievers' <a href="https://www.iafindia.com/mr-ashok-chowdary/" target="_blank">Award</a> for Emerging Company, 2020 You really deserved this honour for your Achievement and Contribution in Nation Building." - <a href="https://www.iafindia.com/" target="_blank">Indian Achievers Forum</a>`
     }
   ]
   constructor() { }
