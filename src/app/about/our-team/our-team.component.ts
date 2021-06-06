@@ -14,7 +14,7 @@ export class OurTeamComponent implements OnInit {
   };
   List: any[] = [
     {
-      img:  "Ashok _Chowdary.JPG",
+      img:  "Ashok.jpg",
       name: "P Ashok Chowdary",
       position: "Founder & CEO",
 
