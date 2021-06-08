@@ -24,7 +24,6 @@ export class PortfolioDetailsComponent implements OnInit {
       current.plugins.index();
     }, 200);
     this.httpClient.get("assets/portfolio-data.json").subscribe(data =>{
-      console.log(data);
       this.List=data;
       this.portfolioDetails=this.List[this.index];
       this.data.img="../portfolio/"+this.portfolioDetails.img;
