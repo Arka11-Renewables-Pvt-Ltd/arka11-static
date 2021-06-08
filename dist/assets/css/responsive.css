@@ -301,6 +301,12 @@
 	header .main-header, header.style-one .sub-header, .admin-bar header.menu-sticky .main-header { padding: 0 40px; }
 	.xamin-services { margin-bottom: 30px !important; }
 }
+@media(min-width:767px) {
+	#ark-portfolio-details .port-box-dimentions, #ark-portfolio .port-box-dimentions{
+		max-height: 250px;
+		min-height: 250px;
+	}
+}
 @media(max-width:767px) {
 	.custom-tab-userbehavior .nav-item { width: 30%; }
 	.custom-tab-userbehavior span.dot { display: none; }
