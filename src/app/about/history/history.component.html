@@ -5,20 +5,34 @@
         <app-title-section [titleSectionProp]="titleSectionProp"></app-title-section>
       </div>
       <div *ngFor="let list of List" class="col-sm-12 mb-5">
-        <div class="{{ list.class }}">
+        <div class="{{ list.class }}" id="{{ list.id }}">
           <div class="xamin-history row row-eq-height align-items-center wow fadeInUp ">
             <div class="col-sm-4 col-lg-2 col-md-2">
-                <img alt="" class="single_image-img attachment-full" height="360" width="550" src="../../../assets/images/about-us/{{ list.img }}" >
+                <img alt="" data-toggle="modal" data-target="#exampleModalCenter" (click)="zoomImg($event)" class="btn single_image-img attachment-full" height="360" width="550" src="../../../assets/images/about-us/{{ list.img }}" >
             </div>
-            <div class="text-lg-center text-left col-sm-12 col-lg-2 col-md-3">
+            <!-- <div  *ngIf="list.year" class="text-lg-center text-left col-sm-12 col-lg-2 col-md-3">
               <h4 class="pt-3 pb-1 pt-lg-0 pb-lg-0">{{ list.year }}</h4>
-            </div>
-            <div class="col-sm-12 col-lg-8 col-md-7">
+            </div> -->
+            <div class="col-sm-12 col-lg-10 col-md-9">
               <p class="mb-0" [innerHtml]="list.desc"></p>
             </div>
           </div>
         </div>
       </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body position-relative">
+        <button type="button" class="close position-absolute history-modal-img" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <img [src]="imgDest" alt="" id="zoom-image">
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>

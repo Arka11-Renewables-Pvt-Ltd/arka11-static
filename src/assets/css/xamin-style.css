@@ -1927,3 +1927,10 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
+.iq-breadcrumb-one {
+  padding: 125px 0 50px;
+}
+.history-modal-img {
+  top:0px;
+  right:5px;
+}
